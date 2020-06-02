@@ -11,9 +11,6 @@ class Stack:
         return self.top_node is None
 
     def push(self, item):
-""" Створюємо новий вузол стеку
-    Якщо стек не порожній, то новий вузол
-    має посилатися на поточну верхівку"""
         new_node = Node(item)
         if not empty:
             new_node.next = self.top_node
@@ -36,3 +33,11 @@ class Stack:
             raise Exception("empty true")
         return self.top_node.item
 
+if __name__ == "__main__":
+    st = Stack()
+    print(st.empty())
+    st.push(11)
+    st.push(12)
+    st.push(14)
+    print(st.pop())
+    print(st.pop())
